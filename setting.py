@@ -5,6 +5,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templetes) 
 STATIC_DIR=os.path.join(BASE_DIR, 'static') 
 
+ALLOWED_HOSTS = []
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,23 +53,22 @@ MIDDLEWARE=[
         "django.middleware.clickjacking.XFrameOptionsMiddleware",
     ]
 
-ROOT_URLCONF = 'YouTube.urls'
+ROOT_URLCONF = 'youtube.urls'
 
-    TEMPLATES=[
+TEMPLATES=[
         {
-            "BACKEND": "django.template.backends.django.DjangoTemplates",
-            "APP_DIRS": True,
-            "OPTIONS": {
-                "context_processors": [
-                    "django.contrib.auth.context_processors.auth",
-                    "django.template.context_processors.debug",
-                    "django.template.context_processors.i18n",
-                    "django.template.context_processors.media",
-                    "django.template.context_processors.static",
-                    "django.template.context_processors.request",
-                    "django.contrib.messages.context_processors.messages",
-                ],
-                "debug": True,
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIR' : [os.path.join(BASE_DIR, 'template']
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.template.context_processors.static",
+                    'django.template.context_processors.request",
+                    'django.contrib.auth.context_processors.auth",
+                    'django.contrib.messages.context_processors.messages',
+
+                ], 
+               
             },
         }
     ],
