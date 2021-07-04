@@ -1,3 +1,84 @@
+import os
+from pathlib import path
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TEMPLATE_DIR = os.path.join(BASE_DIR,'templetes) 
+STATIC_DIR=os.path.join(BASE_DIR, 'static') 
+
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth,
+    'django.contrib.contenttype',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles', 
+    'account''
+]
+    
+    "test_accounts",
+    "test_abstract",
+    "test_vendors",
+    "organizations",
+    "test_custom",
+]
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'UTC'
+
+USE_I18N = True
+    
+USE_LION = True
+
+USE_TZ = True
+
+DATABASES={
+        'default': {
+               'ENGINE': 'django.db.backends.sqlite3',
+               'NAME': os.path.join(BASE_DIR, 'db.sqlite3'), 
+    }
+}
+
+MIDDLEWARE=[
+        "django.middleware.security.SecurityMiddleware",
+        "django.contrib.sessions.middleware.SessionMiddleware",
+        "django.middleware.common.CommonMiddleware",
+        "django.middleware.csrf.CsrfViewMiddleware",
+        "django.contrib.auth.middleware.AuthenticationMiddleware",
+        "django.contrib.messages.middleware.MessageMiddleware",
+        "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    ]
+
+ROOT_URLCONF = 'YouTube.urls'
+
+    TEMPLATES=[
+        {
+            "BACKEND": "django.template.backends.django.DjangoTemplates",
+            "APP_DIRS": True,
+            "OPTIONS": {
+                "context_processors": [
+                    "django.contrib.auth.context_processors.auth",
+                    "django.template.context_processors.debug",
+                    "django.template.context_processors.i18n",
+                    "django.template.context_processors.media",
+                    "django.template.context_processors.static",
+                    "django.template.context_processors.request",
+                    "django.contrib.messages.context_processors.messages",
+                ],
+                "debug": True,
+            },
+        }
+    ],
+    SITE_ID=1,
+    FIXTURE_DIRS=["tests/fixtures"],
+    ORGS_SLUGFIELD="autoslug.AutoSlugField",
+    INSTALLED_APPS=INSTALLED_APPS,
+  
+ROOT_URLCONF="tests.urls",
+STATIC_URL='/static/',
+MEDIA_URL='media/'  
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_in_en)]
 VENV_PATH = os.path.dirname(BASE_DIR) 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root') 
