@@ -41,20 +41,20 @@ DATABASES={
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME' : 'django.contribute.auth.password_
+        'NAME' : 'django.contribute.auth.password_validators.auth'
     }, 
     {
-        'NAME' : 'django.contribute.auth.password_
+        'NAME' : 'django.contribute.auth.password_validators.auth'
     }, 
     {   
-        'NAME' : 'django.contribute.auth.password_
+        'NAME' : 'django.contribute.auth.password_validators.auth'
     }, 
     {  
-        'NAME' : 'django.contribute.auth.password_
+        'NAME' : 'django.contribute.auth.password_validators.auth'
      }
      {
-        'NAME' : 'django.contribute.auth.password_
-      }, 
+        'NAME' : 'django.contribute.auth.password_validators.auth'
+     }, 
 
  ]
 
