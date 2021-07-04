@@ -1,11 +1,18 @@
-from django.db import models 
-from django.contrib.auth.models import AbstractUser,User
+from django.contrib import admin
+from .models import Doctor,Patient,Appointment,PatientDischargeDetails
+# Register your models here.
+class DoctorAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Doctor, DoctorAdmin)
 
+class PatientAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Patient, PatientAdmin)
 
-#from django.utils.html import escape, make_safe
+class AppointmentAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Appointment, AppointmentAdmin)
 
-# Create your models here. 
-class User(AbstractUser):
-    is_admin = models.BooleanField(default=False) 
-    is_patient = models.BooleanField(default=False) 
-    is_doctor = models.BooleanField(default=False) 
+class PatientDischargeDetailsAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(PatientDischargeDetails, PatientDischargeDetailsAdmin)
